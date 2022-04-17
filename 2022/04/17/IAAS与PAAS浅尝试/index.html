@@ -6,13 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta property="og:type" content="article">
+    <meta name="description" content="openstack v2.4脚本执行流程准备阶段 分盘  配置网络，主机名，编辑hosts  设置yum源，挂载  挂载ISO文件  搭建ftp服务器(下载vsftpd) 在**&#x2F;etc&#x2F;vsftpd&#x2F;vsftpd.conf中添加路径anon_root&#x3D;&#x2F;opt&#x2F;** 启动，并设置开机自启，关闭防火墙  设置Selinux，setenforce快速设置，可以用getenforce检测，检验yum">
+<meta property="og:type" content="article">
 <meta property="og:title" content="IAAS与PAAS浅尝试">
 <meta property="og:url" content="http://example.com/2022/04/17/IAAS%E4%B8%8EPAAS%E6%B5%85%E5%B0%9D%E8%AF%95/index.html">
 <meta property="og:site_name" content="Wikiq">
+<meta property="og:description" content="openstack v2.4脚本执行流程准备阶段 分盘  配置网络，主机名，编辑hosts  设置yum源，挂载  挂载ISO文件  搭建ftp服务器(下载vsftpd) 在**&#x2F;etc&#x2F;vsftpd&#x2F;vsftpd.conf中添加路径anon_root&#x3D;&#x2F;opt&#x2F;** 启动，并设置开机自启，关闭防火墙  设置Selinux，setenforce快速设置，可以用getenforce检测，检验yum">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-04-17T10:15:31.000Z">
-<meta property="article:modified_time" content="2022-04-17T10:15:49.043Z">
+<meta property="article:modified_time" content="2022-04-17T12:04:18.823Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="cloud">
 <meta name="twitter:card" content="summary">
@@ -141,7 +143,7 @@
 
     </div>
     <div id="toc">
-      
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#openstack-v2-4%E8%84%9A%E6%9C%AC%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B"><span class="toc-number">1.</span> <span class="toc-text">openstack v2.4脚本执行流程</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%87%86%E5%A4%87%E9%98%B6%E6%AE%B5"><span class="toc-number">1.1.</span> <span class="toc-text">准备阶段</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%84%9A%E6%9C%AC%E8%BF%90%E8%A1%8C"><span class="toc-number">1.2.</span> <span class="toc-text">脚本运行</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#PAAS-k8s-%E8%84%9A%E6%9C%AC%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B"><span class="toc-number">2.</span> <span class="toc-text">PAAS(k8s)脚本执行流程</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#null"><span class="toc-number">2.0.1.</span> <span class="toc-text">null</span></a></li></ol></li></ol></li></ol>
     </div>
   </span>
 </div>
@@ -180,7 +182,56 @@
   
 
   <div class="content" itemprop="articleBody">
-    
+    <h3 id="openstack-v2-4脚本执行流程"><a href="#openstack-v2-4脚本执行流程" class="headerlink" title="openstack v2.4脚本执行流程"></a><strong>openstack v2.4脚本执行流程</strong></h3><h4 id="准备阶段"><a href="#准备阶段" class="headerlink" title="准备阶段"></a><strong>准备阶段</strong></h4><ol>
+<li><p>分盘</p>
+</li>
+<li><p>配置网络，主机名，编辑hosts</p>
+</li>
+<li><p>设置yum源，挂载</p>
+</li>
+<li><p>挂载ISO文件</p>
+</li>
+<li><p>搭建ftp服务器(下载vsftpd)</p>
+<p>在**/etc/vsftpd/vsftpd.conf<strong>中添加路径</strong>anon_root=/opt/**</p>
+<p>启动，并设置开机自启，关闭防火墙</p>
+</li>
+<li><p>设置<strong>Selinux</strong>，<strong>setenforce</strong>快速设置，可以用<strong>getenforce</strong>检测，检验yum</p>
+</li>
+<li><p><code>yum install -y iaas-xiandian</code></p>
+</li>
+<li><p>编辑<code>/etc/xiandian/openrc.sh</code>，部分内容要更改</p>
+</li>
+</ol>
+<h4 id="脚本运行"><a href="#脚本运行" class="headerlink" title="脚本运行"></a><strong>脚本运行</strong></h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">- iaas-pre-host.sh     (双节点运行)</span><br><span class="line">- iaas-install-mysql.sh</span><br><span class="line">- iaas-install-keystone.sh</span><br><span class="line">- iaas-install-glance.sh</span><br><span class="line">- iaas-install-nova-controller.sh     (双节点运行)</span><br><span class="line">- iaas-install-neutron-controller.sh     (双节点运行)</span><br><span class="line">- iaas-install-dashboard.sh</span><br><span class="line">- iaas-install-cinder-controller.sh     (双节点运行)</span><br><span class="line">- iaas-install-swift-controller.sh     (双节点运行)</span><br><span class="line">- iaas-install-heat.sh</span><br><span class="line">- iaas-install-zun-controller.sh      (双节点运行)</span><br><span class="line">- iaas-install-ceilometer-compute.sh     (双节点运行)</span><br><span class="line">- iaas-install-aodh.sh</span><br></pre></td></tr></table></figure>
+
+<p><code>13   添加控制节点资源到云平台</code> </p>
+<p><code>13.1 修改 openrc.sh 把compute节点的IP和主机名改为controller节点的IP和主机名</code></p>
+<p><code>13.2 运行 iaas-install-nova-compute.sh 在控制节点运行iaas-install-nova-compute.sh 执行过程中</code></p>
+<p><code>需要确认登录controller节点和输入controller节点root用户密码。</code></p>
+<h3 id="PAAS-k8s-脚本执行流程"><a href="#PAAS-k8s-脚本执行流程" class="headerlink" title="PAAS(k8s)脚本执行流程"></a><strong>PAAS(k8s)脚本执行流程</strong></h3><ol>
+<li><p>配置网络，主机名，编辑hosts</p>
+</li>
+<li><p>设置yum源，挂载</p>
+</li>
+<li><p>挂载ISO文件</p>
+</li>
+<li><p>搭建ftp服务器(下载vsftpd)</p>
+<p>在**/etc/vsftpd/vsftpd.conf<strong>中添加路径</strong>anon_root=/opt/**</p>
+<p>启动，并设置开机自启，关闭防火墙</p>
+</li>
+<li><p>设置<strong>Selinux</strong>，<strong>setenforce</strong>快速设置，可以用<strong>getenforce</strong>检测，检验yum</p>
+</li>
+<li><p>进入/opt/k8s/运行脚本</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">k8s_harbor_install.sh</span><br></pre></td></tr></table></figure></li>
+<li><p>上传镜像</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /opt/　</span><br><span class="line">./k8s_image_push.sh</span><br></pre></td></tr></table></figure></li>
+<li><p>在master节点执行脚本</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">k8s_master_install.sh</span><br></pre></td></tr></table></figure></li>
+<li><p>在node节点执行脚本</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">k8s_node_install.sh</span><br></pre></td></tr></table></figure></li>
+<li><h5 id="null"><a href="#null" class="headerlink" title="null"></a>null</h5></li>
+</ol>
+
   </div>
 </article>
 
@@ -206,7 +257,7 @@
     </div>
 
     <div id="toc-footer" style="display: none">
-      
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#openstack-v2-4%E8%84%9A%E6%9C%AC%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B"><span class="toc-number">1.</span> <span class="toc-text">openstack v2.4脚本执行流程</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%87%86%E5%A4%87%E9%98%B6%E6%AE%B5"><span class="toc-number">1.1.</span> <span class="toc-text">准备阶段</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%84%9A%E6%9C%AC%E8%BF%90%E8%A1%8C"><span class="toc-number">1.2.</span> <span class="toc-text">脚本运行</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#PAAS-k8s-%E8%84%9A%E6%9C%AC%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B"><span class="toc-number">2.</span> <span class="toc-text">PAAS(k8s)脚本执行流程</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#null"><span class="toc-number">2.0.1.</span> <span class="toc-text">null</span></a></li></ol></li></ol></li></ol>
     </div>
 
     <div id="share-footer" style="display: none">
