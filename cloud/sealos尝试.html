@@ -6,14 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta property="og:type" content="website">
-<meta property="og:title" content="test">
-<meta property="og:url" content="http://example.com/cloud/k8s.html">
+    <meta name="description" content="#下载并安装sealos, sealos是个golang的二进制工具，直接下载拷贝到bin目录即可, release页面也可下载1wget -c https:&#x2F;&#x2F;sealyun-home.oss-cn-beijing.aliyuncs.com&#x2F;sealos&#x2F;latest&#x2F;sealos &amp;&amp; chmod +x sealos &amp;&amp; mv sealos &#x2F;usr&#x2F;bin">
+<meta property="og:type" content="website">
+<meta property="og:title" content="sealos尝试">
+<meta property="og:url" content="http://example.com/cloud/sealos%E5%B0%9D%E8%AF%95.html">
 <meta property="og:site_name" content="Wikiq">
+<meta property="og:description" content="#下载并安装sealos, sealos是个golang的二进制工具，直接下载拷贝到bin目录即可, release页面也可下载1wget -c https:&#x2F;&#x2F;sealyun-home.oss-cn-beijing.aliyuncs.com&#x2F;sealos&#x2F;latest&#x2F;sealos &amp;&amp; chmod +x sealos &amp;&amp; mv sealos &#x2F;usr&#x2F;bin">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2022-04-17T10:27:12.000Z">
-<meta property="article:modified_time" content="2022-04-17T10:27:12.429Z">
+<meta property="article:published_time" content="2022-04-17T10:12:14.000Z">
+<meta property="article:modified_time" content="2022-04-17T10:13:32.693Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="cloud">
 <meta name="twitter:card" content="summary">
     
     
@@ -34,7 +37,7 @@
         
     
     <!-- title -->
-    <title>test</title>
+    <title>sealos尝试</title>
     <!-- styles -->
     
 <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
@@ -126,7 +129,13 @@
   
 
   <div class="content" itemprop="articleBody">
-    
+    <h6 id="下载并安装sealos-sealos是个golang的二进制工具，直接下载拷贝到bin目录即可-release页面也可下载"><a href="#下载并安装sealos-sealos是个golang的二进制工具，直接下载拷贝到bin目录即可-release页面也可下载" class="headerlink" title="#下载并安装sealos, sealos是个golang的二进制工具，直接下载拷贝到bin目录即可, release页面也可下载"></a>#下载并安装sealos, sealos是个golang的二进制工具，直接下载拷贝到bin目录即可, release页面也可下载</h6><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -c https://sealyun-home.oss-cn-beijing.aliyuncs.com/sealos/latest/sealos &amp;&amp; chmod +x sealos &amp;&amp; mv sealos /usr/bin </span><br></pre></td></tr></table></figure>
+
+<h6 id="下载离线资源包"><a href="#下载离线资源包" class="headerlink" title="#下载离线资源包"></a>#下载离线资源包</h6><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -c https://sealyun.oss-cn-beijing.aliyuncs.com/05a3db657821277f5f3b92d834bbaf98-v1.22.0/kube1.22.0.tar.gz</span><br></pre></td></tr></table></figure>
+
+<h6 id="安装一个三master的kubernetes集群"><a href="#安装一个三master的kubernetes集群" class="headerlink" title="#安装一个三master的kubernetes集群"></a>#安装一个三master的kubernetes集群</h6><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sealos init  --passwd &#x27; Qws20020925. &#x27; \</span><br><span class="line">	--master 81.68.182.198 \</span><br><span class="line">	--node 1.13.248.183 --node 1.13.195.130  \</span><br><span class="line">	--pkg-url /root/kube1.22.0.tar.gz \</span><br><span class="line">	--version v1.22.0</span><br></pre></td></tr></table></figure>
+
+
   </div>
 </article>
 
