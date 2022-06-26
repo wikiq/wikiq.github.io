@@ -1,0 +1,406 @@
+
+
+<!DOCTYPE html>
+<html lang="en" color-mode=light>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Gitkraken使用 - Wikiq</title>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="google" content="notranslate" />
+  
+  <meta name="description" content="正式使用流程（Gitkraken）1. clone 项...">
+  <meta name="author" content="John Doe">
+  <link rel="icon" href="/images/icons/favicon-16x16.png" type="image/png" sizes="16x16">
+  <link rel="icon" href="/images/icons/favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/images/icons/apple-touch-icon.png" sizes="180x180">
+  <meta rel="mask-icon" href="/images/icons/stun-logo.svg" color="#333333">
+  
+    <meta rel="msapplication-TileImage" content="/images/icons/favicon-144x144.png">
+    <meta rel="msapplication-TileColor" content="#000000">
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+    
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1445822_r673sha78lq.css">
+
+  
+
+  
+    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+
+  
+
+  
+    
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/xcode.min.css" name="highlight-style" mode="light">
+
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/solarized-dark.min.css" name="highlight-style" mode="dark">
+
+      
+  
+
+  <script>
+    var CONFIG = window.CONFIG || {};
+    var ZHAOO = window.ZHAOO || {};
+    CONFIG = {
+      isHome: false,
+      fancybox: true,
+      pjax: false,
+      lazyload: {
+        enable: true,
+        only_post: 'false',
+        loading: '[object Object]'
+      },
+      donate: {
+        enable: true,
+        alipay: 'http://qiwensong.top/usr/uploads/2022/06/1976600795.jpg',
+        wechat: 'http://qiwensong.top/usr/uploads/2022/06/651137964.png'
+      },
+      galleries: {
+        enable: true
+      },
+      fab: {
+        enable: true,
+        always_show: false
+      },
+      carrier: {
+        enable: true
+      },
+      daovoice: {
+        enable: false
+      },
+      preview: {
+        background: {
+          default: '',
+          api: ''
+        },
+        motto: {
+          default: '我在开了灯的床头下，想问问自己的心啊。',
+          typing: true,
+          api: 'https://v2.jinrishici.com/one.json',
+          data_contents: '["data","content"]'
+        },
+      },
+      qrcode: {
+        enable: true,
+        type: 'url',
+        image: 'https://pic.izhaoo.com/weapp-code.jpg',
+      },
+      toc: {
+        enable: true
+      },
+      scrollbar: {
+        type: 'default'
+      },
+      notification: {
+        enable: false,
+        delay: 4500,
+        list: '',
+        page_white_list: '',
+        page_black_list: ''
+      },
+      search: {
+        enable: false,
+        path: ''
+      }
+    }
+  </script>
+
+  
+
+  
+
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+<body class="lock-screen">
+  <div class="loading"></div>
+  
+    
+
+
+  <nav class="navbar">
+    <div class="left">
+      
+        <i class="iconfont iconhome j-navbar-back-home"></i>
+      
+      
+        <i class="iconfont iconqrcode j-navbar-qrcode"></i>
+      
+      
+        <i class="iconfont iconmoono" id="color-toggle" color-toggle="light"></i>
+      
+      
+    </div>
+    <div class="center">Gitkraken使用</div>
+    <div class="right">
+      <i class="iconfont iconmenu j-navbar-menu"></i>
+    </div>
+    
+      <div id="qrcode-navbar"></div>
+    
+  </nav>
+
+  
+  
+
+<nav class="menu">
+  <div class="menu-container">
+    <div class="menu-close">
+      <i class="iconfont iconbaseline-close-px"></i>
+    </div>
+    <ul class="menu-content"><li class="menu-item">
+        <a href="/ " class="underline "> 首页</a>
+      </li><li class="menu-item">
+        <a href="/galleries/ " class="underline "> 摄影</a>
+      </li><li class="menu-item">
+        <a href="/archives/ " class="underline "> 归档</a>
+      </li><li class="menu-item">
+        <a href="/tags/ " class="underline "> 标签</a>
+      </li><li class="menu-item">
+        <a href="/categories/ " class="underline "> 分类</a>
+      </li><li class="menu-item">
+        <a href="/about/ " class="underline "> 关于</a>
+      </li></ul>
+    
+      <div class="menu-copyright"><p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  <a target="_blank" href="https://github.com/wikiq/wikiq.github.io">wikiq</a></p></div>
+    
+  </div>
+</nav>
+  <main id="main">
+  <div class="article-wrap">
+    <div class="row container">
+      <div class="col-xl-3"></div>
+      <div class="col-xl-6"><article class="article">
+  <div class="wrap">
+    <section class="head">
+  <img   class="lazyload" data-original="/images/theme/post-image.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+  <div class="head-mask">
+    <h1 class="head-title">Gitkraken使用</h1>
+    <div class="head-info">
+      <span class="post-info-item"><i class="iconfont iconcalendar"></i>June 26, 2022</span>
+      
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>2635</span>
+    </div>
+  </div>
+</section>
+    <section class="main">
+      <section class="content">
+        <h2 id="正式使用流程（Gitkraken）"><a href="#正式使用流程（Gitkraken）" class="headerlink" title="正式使用流程（Gitkraken）"></a>正式使用流程（Gitkraken）</h2><h2 id="1-clone-项目到本地"><a href="#1-clone-项目到本地" class="headerlink" title="1. clone 项目到本地"></a>1. clone 项目到本地</h2><p>点击菜单栏 “File” -&gt; “Clone Repo”， 选择本地路径、输入<strong>自己的</strong>远程仓库 URL （如：<code>https://github.com/thousfeet/Test</code>），clone 完成后点击 “Open Now” 。此时左侧的 “REMOTE” 下方的 “origin” 会显示你的远程仓库信息。</p>
+<p><strong>操作动图：</strong></p>
+<p><img   class="lazyload" data-original="https://images2017.cnblogs.com/blog/886183/201711/886183-20171115205614546-519985779.gif" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" ></p>
+<h2 id="2-添加-REMOTE-关联到团队远程仓库"><a href="#2-添加-REMOTE-关联到团队远程仓库" class="headerlink" title="2. 添加 REMOTE 关联到团队远程仓库"></a>2. 添加 REMOTE 关联到团队远程仓库</h2><p>点击 “REMOTE” 右侧 “+” 号，添加团队项目仓库。此时 “REMOTE” 下会多出团队远程仓库信息。</p>
+<p><strong>操作动图：</strong></p>
+<p><img   class="lazyload" data-original="https://images2017.cnblogs.com/blog/886183/201711/886183-20171115205755062-1186236945.gif" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" ></p>
+<h2 id="3-切换到-dev-分支"><a href="#3-切换到-dev-分支" class="headerlink" title="3. 切换到 dev 分支"></a>3. 切换到 dev 分支</h2><p>到这步，在本地仓库（左上方 LOCAL ）仍只能看到 master 分支。因此在 “origin” 下的 “dev” 处点击右键 -&gt; “check out origin/dev”，将远程的 dev 分支同步下来。</p>
+<p><strong>操作动图：</strong></p>
+<p><img   class="lazyload" data-original="https://images2017.cnblogs.com/blog/886183/201711/886183-20171115205812906-735356286.gif" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" ></p>
+<p>完成这一步之后终于可以愉快地打开本地仓库项目开始写代码辣。</p>
+<h2 id="4-提交commit到自己的远程仓库"><a href="#4-提交commit到自己的远程仓库" class="headerlink" title="4. 提交commit到自己的远程仓库"></a>4. 提交commit到自己的远程仓库</h2><p>首先明确：</p>
+<blockquote>
+<p>我们把文件往Git版本库里添加的时候，是分两步执行的：</p>
+<p>第一步是用git add把文件添加进去，实际上就是把文件修改添加到暂存区(stage)；<br>第二步是用git commit提交更改，实际上就是把暂存区的所有内容提交到当前分支。</p>
+<p><img   class="lazyload" data-original="https://images2017.cnblogs.com/blog/886183/201711/886183-20171115205843843-801821514.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" ></p>
+<p>（摘自<a target="_blank" rel="noopener" href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000">廖雪峰 Git 教程</a>）</p>
+</blockquote>
+<p>当你修改本地仓库的文件时，Gitkraken 会自动检测到变更，并在右上角显示 “xx file changes on dev” 。点击 “Stage all changes”，将文件修改添加到暂存区，然后在最右下方的 “Commit message” 中写下 commit 信息，提交到自己的远程仓库。</p>
+<p><strong>操作动图：</strong></p>
+<p><img   class="lazyload" data-original="https://images2017.cnblogs.com/blog/886183/201711/886183-20171115205929546-940928059.gif" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" ></p>
+<h2 id="5-和团队远程保存同步"><a href="#5-和团队远程保存同步" class="headerlink" title="5. 和团队远程保存同步"></a>5. 和团队远程保存同步</h2><p>当你在本地修改了项目的同时，其他队友或许已在此期间给团队的仓库提交了新的代码。因此在完成了一系列 commit 将要 push 到远程之前，先要同步到与团队一致的版本，避免在 pull request 时产生冲突。</p>
+<p>为此我们要做两件事：更新远程仓库的代码到本地仓库（fetch），然后将内容合并到当前分支（merge）。（在合并的时候可能会出现冲突，冲突的解决方式将会在后续说明。）</p>
+<p>在Gitkraken的操作是：在 “REMOTE” 中的团队远程仓库上单击右键 -&gt; Fetch xxx，然后在团队远程仓库的 dev 分支上单击右键 -&gt; Merge xxx/dev to dev 。</p>
+<p>此时可以看到中间的树状分支图上出现了 merge 信息。</p>
+<p><strong>操作动图：</strong></p>
+<p><img   class="lazyload" data-original="https://images2017.cnblogs.com/blog/886183/201711/886183-20171115205943812-1402804833.gif" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" ></p>
+<h2 id="6-push-到自己的远程仓库-amp-请求-pull-request-到团队远程"><a href="#6-push-到自己的远程仓库-amp-请求-pull-request-到团队远程" class="headerlink" title="6. push 到自己的远程仓库 &amp; 请求 pull request 到团队远程"></a>6. push 到自己的远程仓库 &amp; 请求 pull request 到团队远程</h2><p>点击最上方的 push 按钮将之前的一系列 commit 信息推到自己的远程仓库，然后在团队远程仓库的 dev 上右键 -&gt; “Start a pull request to xxx/dev from origin/dev”，输入 pull request 信息（如果只有一条 commit，则会自动填充上 commit 信息），然后点击提交。此时可在右上角的弹窗单击 “View on github”，在浏览器中查看此次 pull request 。</p>
+<p><strong>操作动图：</strong></p>
+<p><img   class="lazyload" data-original="https://images2017.cnblogs.com/blog/886183/201711/886183-20171115205953156-252441323.gif" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" ></p>
+<h4 id="查看某次-commit-的文件改动"><a href="#查看某次-commit-的文件改动" class="headerlink" title="查看某次 commit 的文件改动"></a>查看某次 commit 的文件改动</h4><p>使用 Gitkraken 能非常方便的看到任意一次的 commit 对项目文件的改动。</p>
+<p>具体操作是：在树状分支图上单击某个 commit 记录，在右侧会显示出此次 commit 信息、文件的改动情况（分为红、绿、黄三种标志，分别代表删除文件、添加文件、修改文件）。</p>
+<p><img   class="lazyload" data-original="https://images2017.cnblogs.com/blog/886183/201711/886183-20171116213813734-1277722761.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" ></p>
+<p>当单击某个改动的文件时，会展示出具体的变更情况，可选择 “Diff View” 视图查看与上一次 commit 的差别，或 “File View” 视图查看完整文件。</p>
+<p><img   class="lazyload" data-original="https://images2017.cnblogs.com/blog/886183/201711/886183-20171116213819874-799571790.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" ></p>
+<h2 id="修改-commit-信息"><a href="#修改-commit-信息" class="headerlink" title="修改 commit 信息"></a>修改 commit 信息</h2><p>当一不小心手抖误写和提交了一个 commit 信息之后，可以在树状分支图中选中此 commit 记录（必须是最新一 次commit ，旧的 commit 信息不允许修改），点击右侧上方的 commit 信息进行修改，然后点击下方 “Update Message” 提交修改。</p>
+<p><strong>操作动图：</strong></p>
+<p><img   class="lazyload" data-original="https://images2017.cnblogs.com/blog/886183/201711/886183-20171116213835015-1627367694.gif" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" ></p>
+<h2 id="合并多次-commit-信息"><a href="#合并多次-commit-信息" class="headerlink" title="合并多次 commit 信息"></a>合并多次 commit 信息</h2><p>当从团队项目分支 Merge 到本地时， Git 会自动产生一条形如 “Merge remote-tracking branch ‘upstream/dev’ into dev ” 的 commit 信息，提交到团队项目上去就会有一大堆这种 merge 信息混杂在有用的 commit 记录里。这时候就可以用合并 commit 信息得以解决。</p>
+<p>在Gitkraken中的具体操作是：在树状分支图的某个 commit 记录上右键，选择 “Reset dev to this commit” -&gt; “Soft - keep all changes”。成功后，所有新于此条 commit 的信息都会被抹去，但文件的修改还保留着。</p>
+<p><strong>操作动图：</strong></p>
+<p><img   class="lazyload" data-original="https://images2017.cnblogs.com/blog/886183/201711/886183-20171116213846468-810382532.gif" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" ></p>
+<h2 id="回到旧版本-commit-记录并-push-到远程仓库"><a href="#回到旧版本-commit-记录并-push-到远程仓库" class="headerlink" title="回到旧版本 commit 记录并 push 到远程仓库"></a>回到旧版本 commit 记录并 push 到远程仓库</h2><p>当一不小心把某个代码改崩了且已经传到了远程仓库，想要回退到旧版本的某次 commit 记录并将此次旧记录 push 到远程时，可以做如下操作得以解决：</p>
+<p>在树状分支图的某个 commit 记录上右键，选择 “Reset dev to this commit” -&gt; “Hard - discard all changes”。成功后，所有新于此条 commit 的操作都会被抹去，包括对文件的修改。然后点击上方菜单栏的 push 推到远程仓库，但由于 head 指针滞后，选择 Force 强制把远程项目更为旧版本。</p>
+<p><strong>操作动图：</strong></p>
+<p><img   class="lazyload" data-original="https://images2017.cnblogs.com/blog/886183/201711/886183-20171116213903109-841259697.gif" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" ></p>
+<h2 id="解决-merge-到本地时的冲突"><a href="#解决-merge-到本地时的冲突" class="headerlink" title="* 解决 merge 到本地时的冲突"></a>* 解决 merge 到本地时的冲突</h2><p>当你在本地修改了代码文件时，队友可能修改了同一份代码，这时候从团队项目分支 merge 到本地时，就可能会产生冲突。此时当在团队远程分支右键点击 merge 时，Gitkraken会检测出 conflict ，这时候只要选择 “View conflict file” 就可以打开冲突文件的 diff 视图，通过勾选方框选择保留冲突部分的哪个版本，确定后就可以得到最下方的 Output 示意的最终合并后的文件。</p>
+<p><img   class="lazyload" data-original="https://images2017.cnblogs.com/blog/886183/201711/886183-20171116223157843-906151243.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" ></p>
+
+      </section>
+      <section class="extra">
+        
+          <ul class="copyright">
+  
+    <li><strong>本文作者：</strong>John Doe</li>
+    <li><strong>本文链接：</strong><a href="http://example.com/2022/06/26/Gitkraken%E4%BD%BF%E7%94%A8/index.html" title="http:&#x2F;&#x2F;example.com&#x2F;2022&#x2F;06&#x2F;26&#x2F;Gitkraken%E4%BD%BF%E7%94%A8&#x2F;index.html">http:&#x2F;&#x2F;example.com&#x2F;2022&#x2F;06&#x2F;26&#x2F;Gitkraken%E4%BD%BF%E7%94%A8&#x2F;index.html</a></li>
+    <li><strong>版权声明：</strong>本博客所有文章均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" title="BY-NC-SA" target="_blank" rel="noopener">BY-NC-SA</a> 许可协议，转载请注明出处！</li>
+  
+</ul>
+        
+        
+          <section class="donate">
+  <div id="qrcode-donate">
+    <img   class="lazyload" data-original="http://qiwensong.top/usr/uploads/2022/06/1976600795.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" >
+  </div>
+  <div class="icon">
+    <a href="javascript:;" id="alipay"><i class="iconfont iconalipay"></i></a>
+    <a href="javascript:;" id="wechat"><i class="iconfont iconwechat-fill"></i></a>
+  </div>
+</section>
+        
+        
+  <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/cloud/" rel="tag">cloud</a></li></ul> 
+
+        
+  <nav class="nav">
+    <a></a>
+    <a href="/2022/06/13/%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/">主题配置<i class="iconfont iconright"></i></a>
+  </nav>
+
+      </section>
+      
+    </section>
+  </div>
+</article></div>
+      <div class="col-xl-3">
+        
+          
+  <aside class="toc-wrap">
+    <h3 class="toc-title">文章目录：</h3>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%AD%A3%E5%BC%8F%E4%BD%BF%E7%94%A8%E6%B5%81%E7%A8%8B%EF%BC%88Gitkraken%EF%BC%89"><span class="toc-text">正式使用流程（Gitkraken）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-clone-%E9%A1%B9%E7%9B%AE%E5%88%B0%E6%9C%AC%E5%9C%B0"><span class="toc-text">1. clone 项目到本地</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E6%B7%BB%E5%8A%A0-REMOTE-%E5%85%B3%E8%81%94%E5%88%B0%E5%9B%A2%E9%98%9F%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93"><span class="toc-text">2. 添加 REMOTE 关联到团队远程仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E5%88%87%E6%8D%A2%E5%88%B0-dev-%E5%88%86%E6%94%AF"><span class="toc-text">3. 切换到 dev 分支</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E6%8F%90%E4%BA%A4commit%E5%88%B0%E8%87%AA%E5%B7%B1%E7%9A%84%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93"><span class="toc-text">4. 提交commit到自己的远程仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E5%92%8C%E5%9B%A2%E9%98%9F%E8%BF%9C%E7%A8%8B%E4%BF%9D%E5%AD%98%E5%90%8C%E6%AD%A5"><span class="toc-text">5. 和团队远程保存同步</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-push-%E5%88%B0%E8%87%AA%E5%B7%B1%E7%9A%84%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93-amp-%E8%AF%B7%E6%B1%82-pull-request-%E5%88%B0%E5%9B%A2%E9%98%9F%E8%BF%9C%E7%A8%8B"><span class="toc-text">6. push 到自己的远程仓库 &amp; 请求 pull request 到团队远程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9-commit-%E4%BF%A1%E6%81%AF"><span class="toc-text">修改 commit 信息</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%88%E5%B9%B6%E5%A4%9A%E6%AC%A1-commit-%E4%BF%A1%E6%81%AF"><span class="toc-text">合并多次 commit 信息</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9E%E5%88%B0%E6%97%A7%E7%89%88%E6%9C%AC-commit-%E8%AE%B0%E5%BD%95%E5%B9%B6-push-%E5%88%B0%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93"><span class="toc-text">回到旧版本 commit 记录并 push 到远程仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3-merge-%E5%88%B0%E6%9C%AC%E5%9C%B0%E6%97%B6%E7%9A%84%E5%86%B2%E7%AA%81"><span class="toc-text">* 解决 merge 到本地时的冲突</span></a></li></ol>
+  </aside>
+
+        
+      </div>
+    </div>
+  </div>
+</main>
+  
+
+<footer class="footer">
+  <div class="footer-social"><a 
+        href="tencent://message/?Menu=yes&uin=424579470 "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#12B7F5'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconQQ "></i>
+      </a><a 
+        href="https://github.com/wikiq "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#9f7be1'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  icongithub-fill "></i>
+      </a><a 
+        href="mailto:qwstdx@163.com "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color=#FF3B00" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconmail"></i>
+      </a></div>
+  
+    <div class="footer-copyright"><p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  <a target="_blank" href="https://github.com/wikiq/wikiq.github.io">wikiq</a></p></div>
+  
+</footer>
+  
+      <div class="fab fab-plus">
+    <i class="iconfont iconplus"></i>
+  </div>
+  
+  
+  <div class="fab fab-up">
+    <i class="iconfont iconcaret-up"></i>
+  </div>
+  
+  
+  
+    
+<script src="/js/color-mode.js"></script>
+
+  
+  
+</body>
+
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+
+
+
+  
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+
+
+
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+
+
+
+
+
+  
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+
+
+
+
+<script src="/js/utils.js"></script>
+<script src="/js/script.js"></script>
+
+
+
+
+
+
+
+  <script>
+    (function () {
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      } else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
